@@ -75,11 +75,11 @@ export default class TicTacToeApp extends Component {
                         this.state.showPlayAgain ?
                             <TouchableOpacity onPress={this.onPlayAgain} >
                                 <View style={{
-                                    backgroundColor: '#00CA4E', alignItems: 'center',
+                                    backgroundColor: '#4d9ce6', alignItems: 'center',
                                     justifyContent: 'center', borderRadius: 60, width: 200, height: 60
                                 }}
                                 >
-                                    <Text style={{ color: 'white', fontSize: 20 }}>Play Agian</Text>
+                                    <Text style={{ color: 'white', fontSize: 20 }}>Play Again</Text>
                                 </View>
                             </TouchableOpacity>
                             : <></>
