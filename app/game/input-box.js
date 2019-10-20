@@ -38,7 +38,7 @@ export default class InputBox extends Component {
 
     render() {
         return (<>
-            <View style={this.state.style}>
+            <View style={[this.state.style, { backgroundColor: this.props.backgroundColor }]}>
                 <TouchableOpacity onPress={this.onClick} underlayColor="white">
                     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                         {
@@ -57,16 +57,8 @@ export default class InputBox extends Component {
 
 
     onClick = () => {
-        //alert(this.state.position);
-        //alert(this.props.values);
-        //alert(this.props.values[this.state.position[0]][this.state.position[1]]);
-        if (!this.props.values[this.state.position[0]][this.state.position[1]]) {
-            // if (this.props.isFirstPlayer) {
-            //     this.setState({ input: 'X' });
-            // } else {
-            //     this.setState({ input: 'O' });
-            // }
 
+        if (!this.props.isWon && !this.props.values[this.state.position[0]][this.state.position[1]]) {
             this.props.onClick(this.state.position);
         }
 
@@ -76,6 +68,6 @@ export default class InputBox extends Component {
 
 
 
-    
+
 
 }
